@@ -1,0 +1,36 @@
+<h2>
+<kbd>User List</kbd>
+</h2>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">User Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>13.09.1998</td>
+        <td>Bu tarihte geleceğim</td>
+        <td><button type="button" class="btn btn-light">Edit</button>&nbsp;
+        <button type="button" class="btn btn-secondary">View</button>&nbsp;
+        <button type="button" class="btn btn-dark">Delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+
+    <p ng-bind-html="myText"></p>
+
+</div>
+  
+  <table class="table">
+    <button type="button" class="btn btn-outline-info">Add New User</button>
+  </table>

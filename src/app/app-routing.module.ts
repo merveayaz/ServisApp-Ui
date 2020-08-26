@@ -4,6 +4,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 
 const routes: Routes = [
   {path:'',component:UserlistComponent}
+  
 ];
 
 @NgModule({

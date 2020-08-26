@@ -11,9 +11,9 @@ import { map, debounceTime } from "rxjs/operators";
 export class NgserviceService {
 
   constructor(private _http: HttpClient) { }
-  fetchUserListFromRemote(): any{
+  fetchUserListFromRemote():any{
     console.log("response before");
-    this._http.get("http://localhost:8080/getuserlist").subscribe((data) => {
+     this._http.get("http://localhost:8080/getuserlist").subscribe((data) => {
       console.log("response after" + JSON.stringify(data));
       return <UserListArrayModel>data;
     });

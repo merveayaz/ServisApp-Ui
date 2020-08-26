@@ -1,36 +1,38 @@
-<h2>
-<kbd>User List</kbd>
-</h2>
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">User Id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Date</th>
-        <th scope="col">Description</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>13.09.1998</td>
-        <td>Bu tarihte geleceğim</td>
-        <td><button type="button" class="btn btn-light">Edit</button>&nbsp;
-        <button type="button" class="btn btn-secondary">View</button>&nbsp;
-        <button type="button" class="btn btn-dark">Delete</button></td>
-      </tr>
-      
-    </tbody>
-  </table>
 
-  <div ng-app="myApp" ng-controller="myCtrl">
+<button (click)="get_userlist()">GET Data</button>
+<ul>
+    <li *ngFor="let user of users">
+        id: {{user.id}}
+        
+    </li>
+</ul>
 
-    <p ng-bind-html="myText"></p>
-
-</div>
-  
-  <table class="table">
-    <button type="button" class="btn btn-outline-info">Add New User</button>
-  </table>
+<div class="container">
+    <h2>Servis-ui</h2>
+    <p>Tarihlere göre servise binme durumu:</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>Desctription</th>
+          <th>date</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5</td>
+          <td>yok</td>
+          <td>yarın</td>
+          <td>yarın geleceğim</td>
+          <td>
+            <button type="button" class="btn btn-primary">Edit</button>&nbsp;
+            <button type="button" class="btn btn-info">View</button>&nbsp;
+            <button type="button" class="btn btn-danger">Delete</button>&nbsp;
+          </td>
+        </tr>
+     </tbody>
+    </table>
+    <button type="button" class="btn btn-success">Add new user</button>
+  </div>
